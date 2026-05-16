@@ -7,6 +7,8 @@
 # ─── Python ───────────────────────────────────────────────
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 *$py.class
 *.so
 *.egg
@@ -40,6 +42,7 @@ conda-env/
 
 # ─── Jupyter Notebook ────────────────────────────────────
 .ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
 */.ipynb_checkpoints/*
 *.ipynb_checkpoints
 profile_default/
@@ -163,6 +166,7 @@ dist/
 .cache/
 
 # ─── Streamlit ───────────────────────────────────────────
+.streamlit/
 .streamlit/secrets.toml
 
 # ─── Power BI ─────────────────────────────────────────────
@@ -188,3 +192,29 @@ scratch/
 *.pdf
 .coverage
 .pytest_cache/
+# Data folders
+data/
+!data/.gitkeep
+runs/
+logs/
+results/
+processed/
+
+# Models
+*.pt
+
+# Env
+.env
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+# Allow trained models explicitly
+!models/border_yolo.pt
+!models/anomaly_model.pkl
+!yolov8n.pt
